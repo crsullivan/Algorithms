@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+# Getting started
 import sys
 
 # The cache parameter is here for if you want to implement
