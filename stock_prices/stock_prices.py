@@ -3,18 +3,20 @@
 import argparse
 
 def find_max_profit(prices):
-  current_min_price_so_far = 0
-  max_profit_so_far = 0
+  curr_buy = float('inf')
+  curr_sell = float('-inf')
   for i in range(len(prices)):
-    if prices[i] < current_min_price_so_far:
-      current_min_price_so_far = prices[i]
-      print(current_min_price_so_far)
+    if prices[i] < curr_buy:
+      curr_buy = prices[i]
+      print('min', curr_buy)
     for j in range(i + 1, len(prices)):
       profit = prices[j] - prices[i]
-      if profit > max_profit_so_far:
-        max_profit_so_far = profit
-        print(max_profit_so_far)
-  return max_profit_so_far
+      print('j', prices[j])
+      print('i', prices[i])
+      if profit > curr_sell:
+        curr_sell = profit
+        print('max', curr_sell)
+  return curr_sell
 
 if __name__ == '__main__':
   # This is just some code to accept inputs from the command line
@@ -24,4 +26,4 @@ if __name__ == '__main__':
 
   print("A profit of ${profit} can be made from the stock prices {prices}.".format(profit=find_max_profit(args.integers), prices=args.integers))
 
-  print(find_max_profit([1050, 270, 1540, 3800, 2]))
+  printfind_max_profit([1050, 270, 1540, 3800, 2])
