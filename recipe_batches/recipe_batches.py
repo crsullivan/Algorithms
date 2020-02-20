@@ -1,5 +1,6 @@
 #!/usr/bin/python
-
+import sys
+print(sys.version)
 import math
 
 def recipe_batches(recipe, ingredients):
@@ -12,7 +13,7 @@ def recipe_batches(recipe, ingredients):
     # print(batches)
     whole_batches.append(batches)
     # print(whole_batches)
-  return(whole_batches) 
+  return min((whole_batches)) 
 
 # print(recipe_batches(
 #   { 'milk': 100, 'butter': 50, 'flour': 5 },
