@@ -1,11 +1,24 @@
 #!/usr/bin/python
-
+import sys
+print(sys.version)
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  whole_batches = []
+  for item in recipe.keys():
+    if item not in ingredients.keys():
+      return 0
+  for ingredient, ingredient_recipe in recipe.items():
+    batches = ingredients[ingredient] // ingredient_recipe
+    # print(batches)
+    whole_batches.append(batches)
+    # print(whole_batches)
+  return min((whole_batches)) 
 
-
+# print(recipe_batches(
+#   { 'milk': 100, 'butter': 50, 'flour': 5 },
+#   { 'milk': 138, 'butter': 48, 'flour': 51 }
+# ))
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
   # your implementation with different inputs

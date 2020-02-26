@@ -1,9 +1,10 @@
 #!/usr/bin/python
-
 import sys
+print(sys.version)
 
 def making_change(amount, denominations):
-  pass 
+  pass
+
 
 
 if __name__ == "__main__":
