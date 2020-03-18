@@ -1,11 +1,13 @@
 #!/usr/bin/python
-
+import math
 import argparse
 
 def find_max_profit(prices):
+  
   pass
+  
 
-
+find_max_profit([1050, 270, 1540, 3800, 2])
 if __name__ == '__main__':
   # This is just some code to accept inputs from the command line
   parser = argparse.ArgumentParser(description='Find max profit from prices.')
